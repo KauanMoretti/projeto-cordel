@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+    
+}
+
+ /*Configurações globais do meu CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ /*Configuração do tamanho, fonte e cor de fundo do site*/
+html, body{
+    font-family: var(--fonte1);
+    min-height: 100vh;
+    background-color: darkgray;
+}
+ /*Configuração do meu cabeçalho*/
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+ /*Configuração do meu H1 dentro do meu cabeçalho, coloquei um espaçamento no topo e deixei todas as letras maiusculas, tamanho da minha font em vw(largura da viewport)*/
+header > h1 {
+    font-family: var(--fonte2);
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 10vw;
+}
+ /*Adicionei um padding de 50px para baixo no paragrafo do meu cabeçalho*/
+header > p {
+    padding-bottom: 50px;
+}
+ /*Nos links do meu cabeçalho e do meu rodapé, defini cor branca, sem sublinhado e o negrito*/
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+ /*Quando tiver com o mouse em cima dos links do header e footer aparecera o sublinhado*/
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+ /*Configuração da minha section em geral, tamanho da minha font em vw(largura da viewport), fonte,  espaçamento para baixo e para cima, pra ajudar no efeito paralax que será colocado depois, aumento do espaçamento das letras e um espaçamento de todas as sections para a esquerda*/
+section{
+    font-size: 3.5vw;
+    font-family: var(--fonte3);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+}
+/*espaçamento entre os páragrafos dos sections*/
+section > p {
+    padding-bottom: 2em;
+}
+
+ /*Configuração da minha section de class normal*/
+section.normal{
+    background-color: white;
+    color: black;
+}
+ /*Configuração da minha section de class imagem, adicionei uma sombra interna (inset), adicionei o background-size : cover para que cubra toda a área sem distorção independente do tamanho da tela, e adicionei o background-attachment : fixed para criar o efeito paralax */
+section.imagem{
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.671);
+    background-size: cover;
+    background-attachment: fixed;
+}
+ /*Configuração de paragrafo da section com class imagem, adicionei o inline-block para que ele fique em linha, padding de 5px, um background para que as letras nao se perca no paralax e uma sombra no meu texto*/
+section.imagem > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.445);
+    text-shadow: 1px 1px 0px black;
+}
+
+/*minha imagem do efeito paralax e sua posição a direita no centro*/
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+/*minha segunda imagem do efeito paralax e sua posição a direita no centro*/
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+}
+
+ /*Configuração rodapé*/
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Tudo certo até aqui*/
+ 
+/**/
+body {
+    background-color:;
+}
